@@ -1,0 +1,14 @@
+table{
+    border-collapse: collapse;
+    text-align: center;
+}
+
+td, th , tfoot {
+    border: 1px solid #ccc;
+    padding: 10px 20px;
+  }
+ 
+  h1{
+      color:brown;
+  }
+
