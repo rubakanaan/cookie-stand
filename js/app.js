@@ -6,21 +6,24 @@ let seattle = {
     max: 65,
     avg: 6.3,
     city: 'Seattle',
+    numberOfCookie: [],
+    total: 0,
 
     numOfCoocki: function () {
-        let total = 0;
-        let arr = [];
+
         for (let i = 0; i < 14; i++) {
 
             let customer = getRandomInt(this.min, this.max);
-            let cookie = Math.floor(customer * this.avg);
-            arr.push(cookie);
-            total = total + cookie;
-            //console.log(customer);
+            let cookie = Math.ceil(customer * this.avg);
+            this.numberOfCookie.push(cookie);
+            this.total = this.total + cookie;
+
 
         }
-        return [arr, total];
+        console.log(this.numberOfCookie, this.total);
+
     },
+
 
     render: function () {
         const parentElement = document.getElementById('sales');
@@ -32,34 +35,32 @@ let seattle = {
         labelElement.textContent = this.city;
         ulElement.appendChild(labelElement);
 
-        let result = this.numOfCoocki();
-        let arr = result[0];
-        let total = result[1];
 
-        for (let i = 0; i < 14; i++) {
+
+        for (let i = 0; i < this.numberOfCookie.length; i++) {
 
             if (i < 6) {
                 const liElement1 = document.createElement('li');
-                liElement1.textContent = i + 6 + 'AM :' + arr[i] + ' cookies';
+                liElement1.textContent = i + 6 + 'AM :' + this.numberOfCookie[i] + ' cookies';
                 ulElement.appendChild(liElement1);
             }
 
             else if (i == 6) {
                 const liElement1 = document.createElement('li');
-                liElement1.textContent = '12PM :' + arr[i] + ' cookies';
+                liElement1.textContent = '12PM :' + this.numberOfCookie[i] + ' cookies';
                 ulElement.appendChild(liElement1);
             }
             else {
 
                 const liElement1 = document.createElement('li');
-                liElement1.textContent = i - 6 + 'PM :' + arr[i] + ' cookies';
+                liElement1.textContent = i - 6 + 'PM :' + this.numberOfCookie[i] + ' cookies';
                 ulElement.appendChild(liElement1);
 
             }
 
         }
         const liElement1 = document.createElement('li');
-        liElement1.textContent = 'Total: ' + total + ' cookies';
+        liElement1.textContent = 'Total: ' + this.total + ' cookies';
         ulElement.appendChild(liElement1);
     }
 
@@ -72,19 +73,21 @@ let tokyo = {
     max: 24,
     avg: 1.2,
     city: 'Tokyo',
+    numberOfCookie: [],
+    total: 0,
     numOfCoocki: function () {
-        let total = 0;
-        let arr = [];
+
         for (let i = 0; i < 14; i++) {
 
             let customer = getRandomInt(this.min, this.max);
-            let cookie = Math.floor(customer * this.avg);
-            arr.push(cookie);
-            total = total + cookie;
-            //console.log(customer);
+            let cookie = Math.ceil(customer * this.avg);
+            this.numberOfCookie.push(cookie);
+            this.total = this.total + cookie;
+
 
         }
-        return [arr, total];
+        console.log(this.numberOfCookie, this.total);
+
     },
 
     render: function () {
@@ -98,34 +101,31 @@ let tokyo = {
         ulElement.appendChild(labelElement);
 
 
-        let result = this.numOfCoocki();
-        let arr = result[0];
-        let total = result[1];
 
-        for (let i = 0; i < 14; i++) {
+        for (let i = 0; i < this.numberOfCookie.length; i++) {
 
             if (i < 6) {
                 const liElement1 = document.createElement('li');
-                liElement1.textContent = i + 6 + 'AM :' + arr[i] + ' cookies';
+                liElement1.textContent = i + 6 + 'AM :' + this.numberOfCookie[i] + ' cookies';
                 ulElement.appendChild(liElement1);
             }
 
             else if (i == 6) {
                 const liElement1 = document.createElement('li');
-                liElement1.textContent = '12PM :' + arr[i] + ' cookies';
+                liElement1.textContent = '12PM :' + this.numberOfCookie[i] + ' cookies';
                 ulElement.appendChild(liElement1);
             }
             else {
 
                 const liElement1 = document.createElement('li');
-                liElement1.textContent = i - 6 + 'PM :' + arr[i] + ' cookies';
+                liElement1.textContent = i - 6 + 'PM :' + this.numberOfCookie[i] + ' cookies';
                 ulElement.appendChild(liElement1);
 
             }
 
         }
         const liElement1 = document.createElement('li');
-        liElement1.textContent = 'Total: ' + total + ' cookies';
+        liElement1.textContent = 'Total: ' + this.total + ' cookies';
         ulElement.appendChild(liElement1);
     }
 
@@ -138,20 +138,24 @@ let dubai = {
     max: 38,
     avg: 3.7,
     city: 'Dubai',
+    numberOfCookie: [],
+    total: 0,
+
     numOfCoocki: function () {
-        let total = 0;
-        let arr = [];
+
         for (let i = 0; i < 14; i++) {
 
             let customer = getRandomInt(this.min, this.max);
-            let cookie = Math.floor(customer * this.avg);
-            arr.push(cookie);
-            total = total + cookie;
-            //console.log(customer);
+            let cookie = Math.ceil(customer * this.avg);
+            this.numberOfCookie.push(cookie);
+            this.total = this.total + cookie;
+
 
         }
-        return [arr, total];
+        console.log(this.numberOfCookie, this.total);
+
     },
+
 
     render: function () {
         const parentElement = document.getElementById('sales');
@@ -163,36 +167,35 @@ let dubai = {
         labelElement.textContent = this.city;
         ulElement.appendChild(labelElement);
 
-        let result = this.numOfCoocki();
-        let arr = result[0];
-        let total = result[1];
 
-        for (let i = 0; i < 14; i++) {
+
+        for (let i = 0; i < this.numberOfCookie.length; i++) {
 
             if (i < 6) {
                 const liElement1 = document.createElement('li');
-                liElement1.textContent = i + 6 + 'AM :' + arr[i] + ' cookies';
+                liElement1.textContent = i + 6 + 'AM :' + this.numberOfCookie[i] + ' cookies';
                 ulElement.appendChild(liElement1);
             }
 
             else if (i == 6) {
                 const liElement1 = document.createElement('li');
-                liElement1.textContent = '12PM :' + arr[i] + ' cookies';
+                liElement1.textContent = '12PM :' + this.numberOfCookie[i] + ' cookies';
                 ulElement.appendChild(liElement1);
             }
             else {
 
                 const liElement1 = document.createElement('li');
-                liElement1.textContent = i - 6 + 'PM :' + arr[i] + ' cookies';
+                liElement1.textContent = i - 6 + 'PM :' + this.numberOfCookie[i] + ' cookies';
                 ulElement.appendChild(liElement1);
 
             }
 
         }
         const liElement1 = document.createElement('li');
-        liElement1.textContent = 'Total: ' + total + ' cookies';
+        liElement1.textContent = 'Total: ' + this.total + ' cookies';
         ulElement.appendChild(liElement1);
     }
+
 
 
 
@@ -203,20 +206,22 @@ let paris = {
     max: 38,
     avg: 2.3,
     city: 'Paris',
+    numberOfCookie: [],
+    total: 0,
 
     numOfCoocki: function () {
-        let total = 0;
-        let arr = [];
+
         for (let i = 0; i < 14; i++) {
 
             let customer = getRandomInt(this.min, this.max);
-            let cookie = Math.floor(customer * this.avg);
-            arr.push(cookie);
-            total = total + cookie;
-            //console.log(customer);
+            let cookie = Math.ceil(customer * this.avg);
+            this.numberOfCookie.push(cookie);
+            this.total = this.total + cookie;
+
 
         }
-        return [arr, total];
+        console.log(this.numberOfCookie, this.total);
+
     },
 
     render: function () {
@@ -229,37 +234,35 @@ let paris = {
         labelElement.textContent = this.city;
         ulElement.appendChild(labelElement);
 
-        let result = this.numOfCoocki();
-        let arr = result[0];
-        let total = result[1];
 
-        for (let i = 0; i < 14; i++) {
+
+
+        for (let i = 0; i < this.numberOfCookie.length; i++) {
 
             if (i < 6) {
                 const liElement1 = document.createElement('li');
-                liElement1.textContent = i + 6 + 'AM :' + arr[i] + ' cookies';
+                liElement1.textContent = i + 6 + 'AM :' + this.numberOfCookie[i] + ' cookies';
                 ulElement.appendChild(liElement1);
             }
 
             else if (i == 6) {
                 const liElement1 = document.createElement('li');
-                liElement1.textContent = '12PM :' + arr[i] + ' cookies';
+                liElement1.textContent = '12PM :' + this.numberOfCookie[i] + ' cookies';
                 ulElement.appendChild(liElement1);
             }
             else {
 
                 const liElement1 = document.createElement('li');
-                liElement1.textContent = i - 6 + 'PM :' + arr[i] + ' cookies';
+                liElement1.textContent = i - 6 + 'PM :' + this.numberOfCookie[i] + ' cookies';
                 ulElement.appendChild(liElement1);
 
             }
 
         }
         const liElement1 = document.createElement('li');
-        liElement1.textContent = 'Total: ' + total + ' cookies';
+        liElement1.textContent = 'Total: ' + this.total + ' cookies';
         ulElement.appendChild(liElement1);
     }
-
 
 
 };
@@ -268,20 +271,24 @@ let lima = {
     max: 16,
     avg: 4.6,
     city: 'Lima',
+    numberOfCookie: [],
+    total: 0,
+
     numOfCoocki: function () {
-        let total = 0;
-        let arr = [];
+
         for (let i = 0; i < 14; i++) {
 
             let customer = getRandomInt(this.min, this.max);
-            let cookie = Math.floor(customer * this.avg);
-            arr.push(cookie);
-            total = total + cookie;
-            //console.log(customer);
+            let cookie = Math.ceil(customer * this.avg);
+            this.numberOfCookie.push(cookie);
+            this.total = this.total + cookie;
+
 
         }
-        return [arr, total];
+        console.log(this.numberOfCookie, this.total);
+
     },
+
 
     render: function () {
         const parentElement = document.getElementById('sales');
@@ -294,34 +301,31 @@ let lima = {
         ulElement.appendChild(labelElement);
 
 
-        let result = this.numOfCoocki();
-        let arr = result[0];
-        let total = result[1];
 
-        for (let i = 0; i < 14; i++) {
+        for (let i = 0; i < this.numberOfCookie.length; i++) {
 
             if (i < 6) {
                 const liElement1 = document.createElement('li');
-                liElement1.textContent = i + 6 + 'AM :' + arr[i] + ' cookies';
+                liElement1.textContent = i + 6 + 'AM :' + this.numberOfCookie[i] + ' cookies';
                 ulElement.appendChild(liElement1);
             }
 
             else if (i == 6) {
                 const liElement1 = document.createElement('li');
-                liElement1.textContent = '12PM :' + arr[i] + ' cookies';
+                liElement1.textContent = '12PM :' + this.numberOfCookie[i] + ' cookies';
                 ulElement.appendChild(liElement1);
             }
             else {
 
                 const liElement1 = document.createElement('li');
-                liElement1.textContent = i - 6 + 'PM :' + arr[i] + ' cookies';
+                liElement1.textContent = i - 6 + 'PM :' + this.numberOfCookie[i] + ' cookies';
                 ulElement.appendChild(liElement1);
 
             }
 
         }
         const liElement1 = document.createElement('li');
-        liElement1.textContent = 'Total: ' + total + ' cookies';
+        liElement1.textContent = 'Total: ' + this.total + ' cookies';
         ulElement.appendChild(liElement1);
     }
 
@@ -335,10 +339,13 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min) + min);
 
 };
-
+seattle.numOfCoocki();
 seattle.render();
+tokyo.numOfCoocki();
 tokyo.render();
+dubai.numOfCoocki();
 dubai.render();
+paris.numOfCoocki();
 paris.render();
+lima.numOfCoocki();
 lima.render();
-
