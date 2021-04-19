@@ -93,6 +93,7 @@ let tokyo = {
     render: function () {
         const parentElement = document.getElementById('sales');
 
+        
         const ulElement = document.createElement('ul');
         parentElement.appendChild(ulElement);
 
