@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,15 +8,61 @@
     <title>Home</title>
     <link rel="stylesheet" href="./css/styleIndex.css">
 </head>
+
 <body>
     <header>
-        <h1>WELCOME TO PAT'S SALMON COOKIE</h1>
-<img src="./image/salmon.png" alt="salmon">
+        <h1 >WELCOME TO PAT'S SALMON COOKIE</h1>
+        <article id=pic></article>
+
     </header>
     <main>
+        
         <a href="sales.html">Sales Data!</a>
+        <!-- <img src="./image/salmon.png" alt="salmon"> -->
+        <h2>Seattle</h2>
+        <ul>
+            <li>Hours Open: 6am-7pm</li>
+            <li>Contact Info: (206) 789-0653</li>
+            <li>Location: 514 8th Ave S, Seattle, Washington(WA), 98108</li>
+        </ul>
+        <h2>Tokyo</h2>
+        <ul>
+            <li>Hours Open: 6am-7pm</li>
+            <li>Contact Info: +8179-352-2471</li>
+            <li>Location: 9-12, Nishi Kasai 6-chome</li>
+        </ul>
+        <h2>Dubai</h2>
+        <ul>
+            <li>Hours Open: 6am-7pm</li>
+            <li>Contact Info: 971-6346480</li>
+            <li>Location: P.O Box 96544</li>
+        </ul>
+        <h2>Paris</h2>
+        <ul>
+            <li>Hours Open: 6am-7pm</li>
+            <li>Contact Info : 01.89.35.47.70</li>
+            <li>Location: 70 Rue du Palais</li>
+        </ul>
+        <h2>Lima</h2>
+        <ul>
+            <li>Hours Open: 6am-7pm</li>
+            <li>Contact Info: 287-6887</li>
+            <li>Location: Jirón Julian Piñero, 524 </li>
+        </ul>
     </main>
     <footer></footer>
-    
+    <script>
+        var myPix = new Array("./image/chinook.jpg", "./image/cutter.jpg", "./image/family.jpg","./image/fish.jpg","./image/frosted-cookie.jpg","./image/salmon.png","./image/shirt.jpg");
+        const parentElement = document.getElementById('pic');
+        function choosePic() {
+            var randomNum = Math.floor(Math.random() * myPix.length);
+            let pic=document.createElement("img")
+            pic.src= myPix[randomNum];
+            parentElement.appendChild(pic);
+        }
+        choosePic();
+
+    </script>
 </body>
+
 </html>

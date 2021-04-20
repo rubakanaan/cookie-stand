@@ -8,7 +8,11 @@ td, th , tfoot {
     padding: 10px 20px;
   }
  
-  h1{
+  h1,a{
       color:brown;
+  }
+
+  a{
+      font-size: 30px;
   }
 
