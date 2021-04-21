@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,15 +8,35 @@
     <title>Sales</title>
     <link rel="stylesheet" href="./css/styleSales.css">
 </head>
+
 <body>
-    <header><h1>Pat's Salmon Cookies: Sale data</h1></header>
+    <header>
+        <h1>Pat's Salmon Cookies: Sale data</h1>
+    </header>
     <main>
         <a href="index.html">Home!</a>
-    <article id="sales"></article>
-</main>
+        <fieldset>
+            <legend>Add New City Sales.</legend>
+            <form id="citySales">
+                <label for="cityName">branch Name</label>
+                <input id="cityName" name="cityName" type="text">
+                <label for="minC">Minimum Customer</label>
+                <input id="minC" type="text">
+                <label for="maxC">Maximum Customer</label>
+                <input id="maxC" type="text">
+                <label for="avgC">Avarage Cookies</label>
+                <input id="avgC" type="text">
+
+                <button type="submit">Save</button>
+            </form>
+        </fieldset>
+        <article id="sales"></article>
+
+    </main>
     <footer>
 
     </footer>
     <script src="./js/app.js"></script>
 </body>
+
 </html>
