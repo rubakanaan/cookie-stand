@@ -109,22 +109,16 @@ sales.prototype.render = function () {
     tableRow1.appendChild(tableBody2);
 };
 
-
-
-tableHeader();
+function render() {
+    for(let i = 0; i < sales.allCity.length; i++){
+      sales.allCity[i].render();
+    }
+  }
 let seattle = new sales(23, 65, 6.3, 'Seattle')
-
-seattle.render();
 let tokyo = new sales(3, 24, 1.2, 'Tokyo')
-
-tokyo.render();
 let dubai = new sales(11, 38, 3.7, 'Dubai')
-
-dubai.render();
 let paris = new sales(20, 38, 2.3, 'Paris')
-
-paris.render();
 let lima = new sales(2, 16, 4.6, 'Lima')
-
-lima.render();
+tableHeader();
+render();
 tableFooter();
