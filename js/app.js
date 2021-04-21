@@ -23,22 +23,21 @@ function tableHeader() {
     tableHeader3.textContent = 'Daily Location Total';
     tableRow.appendChild(tableHeader3);
 }
+const tableFoot = document.createElement('tfoot');
 
 function tableFooter() {
-    let totalOfTotals = 0;
-    let hourlyTotal = 0;
-    const tableFoot = document.createElement('tfoot');
+
     table.appendChild(tableFoot);
     const lastRow = document.createElement('tr');
     tableFoot.appendChild(lastRow);
     const lastColomn = document.createElement('th');
     lastColomn.textContent = 'Total';
     lastRow.appendChild(lastColomn);
-
+    let totalOfTotals = 0;
 
     for (let i = 0; i < hour.length; i++) {
         const lastR = document.createElement('th');
-
+        let hourlyTotal = 0;
         for (let j = 0; j < sales.allCity.length; j++) {
             hourlyTotal += sales.allCity[j].numberOfCookie[i];
             totalOfTotals += sales.allCity[j].numberOfCookie[i];
@@ -124,6 +123,8 @@ function eventButton(event) {
     console.log(min, max, avg, city);
     newBranch.render();
     citySales.reset();
+    table.deleteRow(table.rows.length-1);
+    tableFooter();
     
 }
 

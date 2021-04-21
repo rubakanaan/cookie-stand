@@ -1,16 +1,22 @@
+
+body{
+  margin:20px;
+}
 table{
     border-collapse: collapse;
     text-align: center;
-    padding-top: 40px;
+    margin:20px;
 }
 
 td, th , tfoot {
-    border: 1px solid #ccc;
+    border: 1px solid brown;
     padding: 10px 20px;
+    font-size: 20px;
   }
  
   h1,a{
       color:brown;
+      font-size: 37px;
   }
 
   a{
@@ -18,8 +24,11 @@ td, th , tfoot {
   }
 
   fieldset{
-      width: 50%;
+    margin: 20px;
+      width: 35%;
       padding-bottom: 40px;
+      background-color: brown;
+      font-size: 25px;;
   }
   input[type=text], select {
     width: 100%;
@@ -31,10 +40,11 @@ td, th , tfoot {
     box-sizing:border-box;
   }
   
-  input[type=submit] {
+ button[type=submit] {
     width: 100%;
-    background-color: #4CAF50;
-    color: white;
+    background-color:burlywood;
+    color: black;
+    font-size: 25px;
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
@@ -42,6 +52,6 @@ td, th , tfoot {
     cursor: pointer;
   }
   
-  input[type=submit]:hover {
-    background-color: #45a049;
+  button:hover {
+    background-color:darksalmon;
   }
