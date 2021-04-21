@@ -29,22 +29,24 @@ function tableFooter() {
     table.appendChild(tableFoot);
     const lastRow = document.createElement('tr');
     tableFoot.appendChild(lastRow);
-    const lastColomn = document.createElement('td');
+    const lastColomn = document.createElement('th');
     lastColomn.textContent = 'Total';
     lastRow.appendChild(lastColomn);
 
-
+    let totalOfTotals = 0;
     for (let i = 0; i < hour.length; i++) {
-        const lastR = document.createElement('td');
-        lastR.textContent = seattle.numberOfCookie[i] + tokyo.numberOfCookie[i] + paris.numberOfCookie[i] + dubai.numberOfCookie[i] + lima.numberOfCookie[i];
+        const lastR = document.createElement('th');
+        let hourlyTotal = 0;
+        for (let j = 0; j < sales.allCity.length; j++) {
+            hourlyTotal += sales.allCity[j].numberOfCookie[i];
+            totalOfTotals += sales.allCity[j].numberOfCookie[i];
+        }
+        lastR.textContent = hourlyTotal;
         lastRow.appendChild(lastR);
     }
-    const lastTd = document.createElement('td');
-    lastTd.textContent = seattle.total+tokyo.total+paris.total+dubai.total+lima.total;
+    const lastTd = document.createElement('th');
+    lastTd.textContent = totalOfTotals;
     lastRow.appendChild(lastTd);
-
-
-
 
 }
 
@@ -63,8 +65,10 @@ function sales(min, max, avg, city) {
     this.avg = avg;
     this.numberOfCookie = [];
     this.total = 0;
+    sales.allCity.push(this);
 }
 
+sales.allCity = [];
 
 sales.prototype.cookiePurchased = function () {
 
@@ -82,6 +86,7 @@ sales.prototype.cookiePurchased = function () {
 };
 
 sales.prototype.render = function () {
+    this.cookiePurchased();
 
     const tableRow1 = document.createElement('tr');
     table.appendChild(tableRow1);
@@ -108,18 +113,18 @@ sales.prototype.render = function () {
 
 tableHeader();
 let seattle = new sales(23, 65, 6.3, 'Seattle')
-seattle.cookiePurchased();
+
 seattle.render();
 let tokyo = new sales(3, 24, 1.2, 'Tokyo')
-tokyo.cookiePurchased();
+
 tokyo.render();
 let dubai = new sales(11, 38, 3.7, 'Dubai')
-dubai.cookiePurchased();
+
 dubai.render();
 let paris = new sales(20, 38, 2.3, 'Paris')
-paris.cookiePurchased();
+
 paris.render();
 let lima = new sales(2, 16, 4.6, 'Lima')
-lima.cookiePurchased();
+
 lima.render();
 tableFooter();
