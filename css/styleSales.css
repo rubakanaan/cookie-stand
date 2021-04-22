@@ -1,11 +1,21 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Original+Surfer&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100&family=Original+Surfer&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100&family=Arvo:ital@1&family=Original+Surfer&display=swap');
 
 body{
+  
   margin:20px;
+  font-family: 'Original Surfer', cursive;
+  background-color: #eeebdd;
 }
 table{
     border-collapse: collapse;
     text-align: center;
     margin:20px;
+    font-family: 'Antonio', sans-serif;
+    color:#630000;
+    background-color:rgb(253, 196, 163);
+
 }
 
 td, th , tfoot {
@@ -28,8 +38,12 @@ td, th , tfoot {
       width: 35%;
       padding-bottom: 40px;
       background-color: brown;
-      font-size: 25px;;
+      font-size: 25px;
+      color:rgb(253, 196, 163);
   }
+
+
+
   input[type=text], select {
     width: 100%;
     padding: 12px 20px;
